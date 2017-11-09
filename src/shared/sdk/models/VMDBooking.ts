@@ -48,6 +48,7 @@ export class VMDBooking implements VMDBookingInterface {
       name: 'VMDBooking',
       plural: 'VMDBookings',
       path: 'VMDBookings',
+      idName: 'id',
       properties: {
         "id": {
           name: 'id',

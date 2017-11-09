@@ -1,3 +1,4 @@
+/* tslint:disable */
 /**
 * @module SDKModule
 * @author Jonathan Casarrubias <t:@johncasarrubias> <gh:jonathan-casarrubias>
@@ -54,6 +55,7 @@ import { VMDMasterEmmployeeCredentialApi } from './services/custom/VMDMasterEmmp
 import { VMDAboutUsApi } from './services/custom/VMDAboutUs';
 import { VMDTeamApi } from './services/custom/VMDTeam';
 import { VMDBookingApi } from './services/custom/VMDBooking';
+import { ContainerApi } from './services/custom/Container';
 /**
 * @module SDKBrowserModule
 * @description
@@ -91,6 +93,7 @@ export class SDKBrowserModule {
         VMDAboutUsApi,
         VMDTeamApi,
         VMDBookingApi,
+        ContainerApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }
@@ -108,3 +111,4 @@ export * from './lb.config';
 export * from './storage/storage.swaps';
 export { CookieBrowser } from './storage/cookie.browser';
 export { StorageBrowser } from './storage/storage.browser';
+

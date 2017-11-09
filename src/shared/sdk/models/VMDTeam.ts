@@ -44,6 +44,7 @@ export class VMDTeam implements VMDTeamInterface {
       name: 'VMDTeam',
       plural: 'VMDTeams',
       path: 'VMDTeams',
+      idName: 'id',
       properties: {
         "id": {
           name: 'id',

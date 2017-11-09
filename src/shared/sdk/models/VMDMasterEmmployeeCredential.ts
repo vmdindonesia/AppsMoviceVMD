@@ -52,6 +52,7 @@ export class VMDMasterEmmployeeCredential implements VMDMasterEmmployeeCredentia
       name: 'VMDMasterEmmployeeCredential',
       plural: 'VMDMasterEmmployeeCredentials',
       path: 'VMDMasterEmmployeeCredentials',
+      idName: 'id',
       properties: {
         "id": {
           name: 'id',
@@ -86,7 +87,10 @@ export class VMDMasterEmmployeeCredential implements VMDMasterEmmployeeCredentia
         accessTokens: {
           name: 'accessTokens',
           type: 'any[]',
-          model: ''
+          model: '',
+          relationType: 'hasMany',
+                  keyFrom: 'id',
+          keyTo: 'userId'
         },
       }
     }

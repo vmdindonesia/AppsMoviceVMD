@@ -5,7 +5,7 @@ export interface VMDMasteruserdataInterface {
   "id"?: number;
   "fullname": string;
   "address": string;
-  "photo": string;
+  "photo"?: string;
   "no_telp": string;
   "tglLahir": Date;
   "statusPerkawinan": string;
@@ -52,6 +52,7 @@ export class VMDMasteruserdata implements VMDMasteruserdataInterface {
       name: 'VMDMasteruserdata',
       plural: 'VMDMasteruserdata',
       path: 'VMDMasteruserdata',
+      idName: 'id',
       properties: {
         "id": {
           name: 'id',

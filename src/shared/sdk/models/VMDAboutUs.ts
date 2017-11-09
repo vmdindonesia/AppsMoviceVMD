@@ -46,6 +46,7 @@ export class VMDAboutUs implements VMDAboutUsInterface {
       name: 'VMDAboutUs',
       plural: 'VMDAboutUs',
       path: 'VMDAboutUs',
+      idName: 'id',
       properties: {
         "nameTeam": {
           name: 'nameTeam',

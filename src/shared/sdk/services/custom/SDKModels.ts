@@ -6,6 +6,7 @@ import { VMDMasterEmmployeeCredential } from '../../models/VMDMasterEmmployeeCre
 import { VMDAboutUs } from '../../models/VMDAboutUs';
 import { VMDTeam } from '../../models/VMDTeam';
 import { VMDBooking } from '../../models/VMDBooking';
+import { Container } from '../../models/Container';
 
 export interface Models { [name: string]: any }
 
@@ -19,6 +20,7 @@ export class SDKModels {
     VMDAboutUs: VMDAboutUs,
     VMDTeam: VMDTeam,
     VMDBooking: VMDBooking,
+    Container: Container,
     
   };
 

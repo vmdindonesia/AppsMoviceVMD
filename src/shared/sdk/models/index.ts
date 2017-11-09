@@ -5,5 +5,6 @@ export * from './VMDMasterEmmployeeCredential';
 export * from './VMDAboutUs';
 export * from './VMDTeam';
 export * from './VMDBooking';
+export * from './Container';
 export * from './BaseModels';
 export * from './FireLoopRef';
