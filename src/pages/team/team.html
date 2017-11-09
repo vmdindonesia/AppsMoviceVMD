@@ -1,0 +1,95 @@
+<!--
+  Generated template for the TeamPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Team</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="VMD">
+      <ion-segment-button value="kittens">
+        Top Manager
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        Staff Employee
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="VMD">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/image/akis.jpg">
+        </ion-thumbnail>
+        <h2>
+          <b>Business Analyst</b>
+        </h2>
+        <h2>Akis Latuconsina</h2>
+        <h2>081284485300</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/image/wira.jpg">
+        </ion-thumbnail>
+        <h2>
+          <b>Project Special</b>
+        </h2>
+        <h2>Wira Satria Trikusuma</h2>
+        <h2>081273376451</h2>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/image/yanto.jpg">
+        </ion-thumbnail>
+        <h2>
+          <b>IT Support</b>
+        </h2>
+        <h2>Haryanto Setiawan</h2>
+        <h2>085777804409</h2>
+      </ion-item>
+      <button ion-button round (click)="editteam()" full>Add</button>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/image/leader.jpg">
+        </ion-thumbnail>
+        <h2>
+          <b>Chief Executive Officer</b>
+        </h2>
+        <h2>Rendy Sutandy</h2>
+        <h2>085219100674</h2>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/image/aji.jpg">
+        </ion-thumbnail>
+        <h2>
+          <b>Chief Operating Officer</b>
+        </h2>
+        <h2>Aji Tirta Sundawa</h2>
+        <h2>085771049397</h2>
+      </ion-item>
+      <button ion-button round full>Edit</button>
+    </ion-list>
+  </div>
+</ion-content>

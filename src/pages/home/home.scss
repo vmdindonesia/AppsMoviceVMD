@@ -1,3 +1,48 @@
 page-home {
+    .card-background-page {
+        
+          ion-card {
+            position: relative;
+            text-align: center;
+          }
+        
+          .card-title {
+            position: absolute;
+            top: 50%;
+            font-size: 1em;
+            width: 100%;
+            font-weight: bold;
+            color: rgb(112, 103, 103);
+            margin-left: -13px;
+          }
+        
+        }
+        
+            .segment{
+              background-color: dimgray;
+              color: white;
+              height: 9%;
+              margin-top: 2px;
+              padding: 10px 15px;
+              margin-bottom: 5px;
+            }
 
+    .image-slide {
+      width: 700px;
+      height: 200px;
+    }
+        
+    .image-slide2 {
+      width: 100px;
+      height: 50px;
+    }
+
+    .image-slide3 {
+      width: 300px;
+      height: 90px;
+    }
+
+    .title-font {
+      font-size: 10px;
+    }
 }

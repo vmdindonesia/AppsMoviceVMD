@@ -1,0 +1,60 @@
+page-page-profile-on-booking {
+  
+      .image-slide3 {
+        width: 15px;
+        height: 15px;
+      }
+
+      .example {
+        color: #06358d;
+        font-size : 20px;
+        }
+
+        .example2 {
+          color: #080808;
+          font-size : 15px;
+          }
+
+        #bg{
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position-y: 40%;
+      }
+  
+      .textcenter {
+        color: #080808;
+        font-size : 12px;
+        margin-top : 2em; 
+        }
+
+      .griddown {
+        margin-top: 1.5em;
+       }
+
+
+
+      .foto-div{
+          width: 6em;
+          height: 6em;
+          border-radius: 40%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin: 0 auto;
+          background-position-y: 0;
+          margin-top: 0em;
+          margin-left: 1em;
+          border: 3px salod #ffffff;
+          background-image:url(../assets/image/akis.jpg);
+      }
+
+  
+      .backimageandheight{
+        height : 25%;
+        background-image:url(../assets/image/back1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+}

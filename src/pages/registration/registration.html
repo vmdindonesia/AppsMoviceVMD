@@ -1,0 +1,68 @@
+
+<ion-header>
+
+  <ion-navbar color=primary>
+      
+    <ion-title text-center>Registration </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary">First Name :</ion-label>
+          <ion-input [(ngModel)]="name" placeholder="Your First Name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary">Full Name :</ion-label>
+            <ion-input [(ngModel)]="realm" placeholder=" Your Full Name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary">Address :</ion-label>
+            <ion-input [(ngModel)]="address" placeholder=" your address"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label color="primary">Telephone number :</ion-label>
+            <ion-input [(ngModel)]="no_phone" placeholder=" Your Number Phone"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary">Place of Born :</ion-label>
+            <ion-input [(ngModel)]="tempatLahir" placeholder=" where you born.."></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary">Date of Bird:</ion-label>
+            <ion-input type="date" [(ngModel)]="tglLahir"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="primary">Mariage Status:</ion-label>
+            <ion-input [(ngModel)]="statusPerkawinan" placeholder=" Your Marriage Status"></ion-input>
+          </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" >Email Address :</ion-label>
+          <ion-input [(ngModel)]="email" type="email" placeholder="Email Address"></ion-input>
+        </ion-item> 
+      
+        <ion-item>
+            <ion-label color="primary" fixed>Username :</ion-label>
+            <ion-input [(ngModel)]="username" placeholder="   Your Username"></ion-input>
+           </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" >Input Password :</ion-label>
+          <ion-input [(ngModel)]="password" type="password" placeholder="Write Your Password"></ion-input>
+        </ion-item>
+      </ion-list>
+        <button ion-button color="primary" round (click)="showAlert()" >Save</button>        
+        <button ion-button color="primary" round (click)="dismiss()" >Cancel</button>                
+        
+</ion-content>
