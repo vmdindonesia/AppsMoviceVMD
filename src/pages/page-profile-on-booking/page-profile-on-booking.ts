@@ -15,7 +15,7 @@ import { Storage } from '@ionic/storage';
 })
 export class PageProfileOnBookingPage {
 
-  public userid: any;
+  public iduser: any;
   public namauser: any;
   public photo: any = 'assets/image/VMD.jpg';
 
@@ -32,8 +32,8 @@ export class PageProfileOnBookingPage {
   ionViewDidLoad() {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
-      this.userid = result;
-      this.namauser = this.userid.user.username;
+      this.iduser = result;
+      this.namauser = this.iduser.user.username;
     })
   }
 
