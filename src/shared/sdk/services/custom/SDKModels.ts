@@ -7,6 +7,7 @@ import { VMDAboutUs } from '../../models/VMDAboutUs';
 import { VMDTeam } from '../../models/VMDTeam';
 import { VMDBooking } from '../../models/VMDBooking';
 import { Container } from '../../models/Container';
+import { VMDMenuCredentials } from '../../models/VMDMenuCredentials';
 
 export interface Models { [name: string]: any }
 
@@ -21,6 +22,7 @@ export class SDKModels {
     VMDTeam: VMDTeam,
     VMDBooking: VMDBooking,
     Container: Container,
+    VMDMenuCredentials: VMDMenuCredentials,
     
   };
 

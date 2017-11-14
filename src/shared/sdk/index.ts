@@ -56,6 +56,7 @@ import { VMDAboutUsApi } from './services/custom/VMDAboutUs';
 import { VMDTeamApi } from './services/custom/VMDTeam';
 import { VMDBookingApi } from './services/custom/VMDBooking';
 import { ContainerApi } from './services/custom/Container';
+import { VMDMenuCredentialsApi } from './services/custom/VMDMenuCredentials';
 /**
 * @module SDKBrowserModule
 * @description
@@ -94,6 +95,7 @@ export class SDKBrowserModule {
         VMDTeamApi,
         VMDBookingApi,
         ContainerApi,
+        VMDMenuCredentialsApi,
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser },
         { provide: SocketDriver, useClass: SocketBrowser }
