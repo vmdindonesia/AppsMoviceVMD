@@ -46,11 +46,11 @@ export class BookingListPage {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
       this.userid = result;
-      this.iduser = this.userid.idUser;
+      this.iduser = this.userid.userId;
       console.log(this.iduser);
       this.VMDBooking.find({
         where: {
-          idUser: this.iduser
+          userId: this.iduser
         }
       }).subscribe((result) => {
         loader.dismiss();
