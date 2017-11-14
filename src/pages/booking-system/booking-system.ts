@@ -37,13 +37,13 @@ export class BookingSystemPage {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
       this.user1 = result;
-      this.iduser = this.user1.user.id;
+      this.iduser = this.user1.userId;
     })
   }
 
   booking() {
     this.VMDBooking.create({
-      idUser : this.thisid,
+      userId : this.iduser,
       fullname: this.fullname1,
       address: this.address1,
       application: this.application1,

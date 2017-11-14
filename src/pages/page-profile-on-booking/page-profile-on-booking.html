@@ -18,7 +18,7 @@
     <ion-grid>
       <ion-row class="griddown">
         <ion-col col-4>
-          <div class="foto-div"></div>
+          <div class="foto-div" [ngStyle]="{'background-image': 'url(' + photo + ')'}"  (click)="takePicture()"></div>
         </ion-col>
         <ion-col col-8 class="textcenter">
           <b class="example">{{namauser}}</b>
@@ -37,7 +37,7 @@
       </ion-col>
       <ion-col text-center col-3>
         <button ion-button color="secondary">
-          <img src="assets/image/about_us.svg" class="image-slide">
+          <img src="assets/image/about_us.svg" class="image-slide" (click)="testphotopage()">
         </button>
         <b>About Us</b>
       </ion-col>
