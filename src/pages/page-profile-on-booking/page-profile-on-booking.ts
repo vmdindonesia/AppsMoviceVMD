@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { Storage } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 import { LoopBackConfig } from '../../shared/sdk';
-import { FileUploadOptions } from '@ionic-native/file-transfer';
+import { FileTransfer, FileTransferObject, FileUploadOptions } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
 import { UUID } from 'angular2-uuid';
 
 
