@@ -22,6 +22,7 @@ export class RegistrationPage {
   public password: any;
   public email: any;
   public idUser: any;
+  public hakuser : any = 'member';
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -37,6 +38,7 @@ export class RegistrationPage {
   }
   showAlert() {
     this.VMDUserRegistration.create({
+      hakUser : this.hakuser,
       realm: this.realm,
       username: this.username,
       password: this.password,
@@ -46,6 +48,7 @@ export class RegistrationPage {
       this.idUser = this.dataTemp.id;
 
       this.VMDMasteruserdata.create({
+        hakUser : this.hakuser,
         userId: this.idUser,
         fullname: this.realm,
         address: this.address,
