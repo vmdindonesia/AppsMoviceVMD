@@ -1,0 +1,23 @@
+<!--
+  Generated template for the InformationProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header color="primary">
+  <ion-navbar color="primary">
+    <ion-title>Information Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let datas of variable">
+    <ion-item >
+      <p>{{datas.fullname}}</p>
+      <p>{{datas.address}}</p>
+      <p>{{datas.no_telp}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
