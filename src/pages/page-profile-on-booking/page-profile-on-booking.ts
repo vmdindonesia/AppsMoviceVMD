@@ -33,7 +33,6 @@ export class PageProfileOnBookingPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-<<<<<<< Updated upstream
     public storage: Storage,
     public camera: Camera,
     public alertCtrl: AlertController
@@ -43,12 +42,6 @@ export class PageProfileOnBookingPage {
     } else {
       this.photo = LoopBackConfig.getPath() + 'api/containers/storage/User/download';
     }
-=======
-    public storage: Storage
-  ){
-    
-   
->>>>>>> Stashed changes
   }
 
   ionViewDidLoad() {
@@ -62,7 +55,6 @@ export class PageProfileOnBookingPage {
   bookinglist() {
     this.navCtrl.push('BookingListPage');
   }
-<<<<<<< Updated upstream
 
   public takePicture(isCamera): any {
 
@@ -116,9 +108,5 @@ export class PageProfileOnBookingPage {
 
   testphotopage(){
     this.navCtrl.push('PhotopagePage')
-=======
-  information() {
-    this.navCtrl.push('InformationProfilePage');
->>>>>>> Stashed changes
   }
 }
