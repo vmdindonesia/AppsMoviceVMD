@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
+import { VMDBooking } from './../../shared/sdk/models/VMDBooking';
 import { Storage } from '@ionic/storage';
 /**
  * Generated class for the BookingSystemPage page.
@@ -25,9 +26,11 @@ export class BookingSystemPage {
   public description1: any;
   public thisid :any;
 
+public vmdbooking : any = VMDBooking ;
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDBooking: VMDBookingApi,
+    public VMDbooking: VMDBookingApi,
     public alertCtrl: AlertController,
     public storage: Storage
   ) {
@@ -36,19 +39,13 @@ export class BookingSystemPage {
   ionViewDidLoad() {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
-      this.user1 = result;
-      this.iduser = this.user1.userId;
+      this.vmdbooking = result;
+      this.iduser = this.vmdbooking.userId;
     })
   }
 
   booking() {
-    this.VMDBooking.create({
-      userId : this.iduser,
-      fullname: this.fullname1,
-      address: this.address1,
-      application: this.application1,
-      description: this.description1
-    }).subscribe((result) => {
+    this.VMDbooking.create(this.vmdbooking).subscribe((result) => {
       console.log(result);
     })
     {

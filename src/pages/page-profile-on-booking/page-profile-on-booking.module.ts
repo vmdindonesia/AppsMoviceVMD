@@ -15,7 +15,6 @@ import { File } from '@ionic-native/file';
   providers: [
     Camera,
     FileTransfer,
-    File,
     FileTransferObject
   ],
 })

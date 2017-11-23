@@ -3,8 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { VMDMasteruserdataApi } from './../../shared/sdk/services/custom/VMDMasteruserdata';
 import { VMDMasterEmmployeeCredentialApi } from './../../shared/sdk/services/custom/VMDMasterEmmployeeCredential';
-import { subscribeOn } from 'rxjs/operator/subscribeOn';
-
+;
 
 /**
  * Generated class for the InformationProfilePage page.
@@ -48,7 +47,7 @@ export class InformationProfilePage {
       if (this.vartiga == 'admin'){
         this.VMDUserLogin.find()
         .subscribe((result)=> {
-        console.log(result, 'ini hasil');
+        console.log(result, 'ini hasil IF');
         this.variable = result;
         }
       )} else {

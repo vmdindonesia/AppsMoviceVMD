@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VMDBookingApi } from './../../shared/sdk/services/custom/VMDBooking';
+import { VMDBooking } from './../../shared/sdk/models/VMDBooking';
 import { Storage } from '@ionic/storage';
 import { LoadingController } from 'ionic-angular';
 
@@ -17,24 +18,18 @@ import { LoadingController } from 'ionic-angular';
   templateUrl: 'booking-list.html',
 })
 export class BookingListPage {
-
-  public namefull: any;
-  public alamat: any;
-  public judulaplikasi: any;
-  public descriptionapp: any;
-  public userid: any;
   public viewdata: any;
   public iduser: any;
   public id: any;
+  public booking : any = VMDBooking ; 
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public VMDBooking: VMDBookingApi,
+    public vmdbooking: VMDBookingApi,
     public storage: Storage,
     public loadingCtrl: LoadingController
   ) {
-    
   }
 
   ionViewDidLoad() {
@@ -45,18 +40,24 @@ export class BookingListPage {
     
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
-      this.userid = result;
-      this.iduser = this.userid.userId;
-      console.log(this.iduser);
-      this.VMDBooking.find({
+      this.booking = result;
+      this.iduser = this.booking.userId;
+      console.log(this.iduser,'hasil id user')
+      this.vmdbooking.find({
         where: {
-          userId: this.iduser
+          userId : this.iduser
         }
       }).subscribe((result) => {
         loader.dismiss();
         console.log(result );
         this.viewdata = result;
       })
-    })
+    })  
   }
+
+  editbooking(event){
+    console.log(event)
+    this.navCtrl.push('EditbookingPage' ,{event, firstpassed : this.iduser }  )
+  }
+
 }

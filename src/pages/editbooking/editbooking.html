@@ -1,5 +1,5 @@
 <!--
-  Generated template for the BookingSystemPage page.
+  Generated template for the EditbookingPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -9,28 +9,29 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Booking System</ion-title>
+    <ion-title>Edit Data</ion-title>
   </ion-navbar>
 </ion-header>
+
 
 <ion-content padding>
   <ion-list>
     <ion-item>
       <ion-label stacked>Full Name :</ion-label>
-      <ion-input type="text" [(ngModel)]="vmdbooking.fullname"></ion-input>
+      <ion-input type="text"[(ngModel)]="booking.fullname"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Address :</ion-label>
-      <ion-input type="text" [(ngModel)]="vmdbooking.address"></ion-input>
+      <ion-input type="text" [(ngModel)]="booking.address"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Name Of Application</ion-label>
-      <ion-input type="text" [(ngModel)]="vmdbooking.application"></ion-input>
+      <ion-input type="text"[(ngModel)]="booking.application"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Deskripsi Application</ion-label>
-      <ion-input type="text" [(ngModel)]="vmdbooking.description"></ion-input>
+      <ion-input type="text" [(ngModel)]="booking.description"></ion-input>
     </ion-item>
   </ion-list>
-  <button ion-button color="primary" round (click)="booking()">Save</button>
+  <button ion-button color="primary" round (click)="update()">Update</button>
 </ion-content>
