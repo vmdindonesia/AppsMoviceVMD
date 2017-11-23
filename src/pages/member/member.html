@@ -16,7 +16,7 @@
 
 <ion-content padding>
   <ion-list >
-    <ion-item *ngFor="let datas of viewmember">
+    <ion-item (click) = "FormPage(datas.id)" *ngFor="let datas of viewmember">
       <ion-avatar item-start>
         <img style="width: 80px; height: 80px;" src="assets/image/VMD.jpg">
       </ion-avatar>

@@ -19,10 +19,6 @@ import { VMDMasteruserdataApi } from './../../shared/sdk/services/custom/VMDMast
 export class MemberPage {
   public member: any;
   public member2: any;
-  public listmember: any;
-  public membername: any;
-  public memberfullname: any;
-  public memberemail: any;
   public id: any;
   public viewmember: any;
 
@@ -34,13 +30,13 @@ export class MemberPage {
   ) {
   }
 
-  ionViewDidLoad() {
+  public ionViewDidLoad() {
     this.storage.get('vmdStorage').then((result) => {
       console.log(result);
       this.member = result;
       this.member2 = this.member.user.id
       console.log(this.member2);
-      // this.VMDUserMember.find
+
       this.VMDMasteruserdata.find({
         where: {
           id: this.id
@@ -48,9 +44,13 @@ export class MemberPage {
       }).subscribe((result) => {
         console.log(result);
         this.viewmember = result;
+      });
 
-      })
     });
   }
-}
 
+  public FormPage(event) {
+    this.navCtrl.push('FormPage', { data: event });
+  }
+
+}
