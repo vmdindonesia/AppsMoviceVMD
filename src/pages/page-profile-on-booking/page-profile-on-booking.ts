@@ -3,8 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
 import { Storage } from '@ionic/storage';
 import { Camera } from '@ionic-native/camera';
 import { LoopBackConfig } from '../../shared/sdk';
-import { FileTransfer, FileTransferObject, FileUploadOptions } from '@ionic-native/file-transfer';
-import { File } from '@ionic-native/file';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { UUID } from 'angular2-uuid';
 
 
@@ -25,7 +24,6 @@ export class PageProfileOnBookingPage {
   public iduser: any;
   public namauser: any;
   public photo: any;
-  public transfer: any;
   public imagefile: any;
   public optionFile: any;
 
@@ -35,7 +33,8 @@ export class PageProfileOnBookingPage {
     public navParams: NavParams,
     public storage: Storage,
     public camera: Camera,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public transfer: FileTransfer
   ) {
     if (this.photo == null || this.photo == undefined) {
       this.photo = 'assets/image/VMD.jpg';
@@ -69,7 +68,7 @@ export class PageProfileOnBookingPage {
       saveToPhotoAlbum: false,
       cameraDirection: 1
     }).then((imageData) => {
-      
+
       this.photo = imageData;
 
       const options: FileUploadOptions = {
@@ -81,32 +80,31 @@ export class PageProfileOnBookingPage {
 
       // this.optionFile = options;
       // console.log(this.optionFile);
-      this.navCtrl.push('PhotopagePage', { firstPassed :this.photo, setting: options});
+      // this.navCtrl.push('PhotopagePage', { firstPassed :this.photo, setting: options});
 
-      // const fileTransfer: FileTransferObject = this.transfer.create();
-      // fileTransfer.upload(this.photo, LoopBackConfig.getPath() + '/api/containers/User/upload', options)
-      //   .then((data) => {
-      //     console.log(data, 'Data Sukses')
-      //     console.log('Sukses Upload Foto')
-
-      //   });
+      const fileTransfer: FileTransferObject = this.transfer.create();
+      fileTransfer.upload(this.photo, LoopBackConfig.getPath() + '/api/containers/User/upload', options)
+        .then((data) => {
+          console.log(data, 'Data Sukses')
+          console.log('Sukses Upload Foto')
+        });
 
     }, (err) => {
-    
-        let alert = this.alertCtrl.create({
-          subTitle: (err == 'Camera cancelled.') ? 'Camera cancelled.' : 'Camera cancelled.',
-          buttons: [
-            {
-              text: 'Dismiss',
-              handler: () => {
-              }
-            }]
-        });
-        alert.present();
+
+      let alert = this.alertCtrl.create({
+        subTitle: (err == 'Camera cancelled.') ? 'Camera cancelled.' : 'Camera cancelled.',
+        buttons: [
+          {
+            text: 'Dismiss',
+            handler: () => {
+            }
+          }]
       });
+      alert.present();
+    });
   }
 
-  testphotopage(){
-    this.navCtrl.push('PhotopagePage')
+  information() {
+    this.navCtrl.push('InformationProfilePage');
   }
 }
